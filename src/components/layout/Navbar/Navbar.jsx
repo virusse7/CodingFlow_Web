@@ -12,10 +12,19 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   return (
     <header
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-abyss/70 py-3 backdrop-blur-md" : "bg-transparent py-5"
+        scrolled || menuOpen
+          ? "bg-abyss/95 py-3 backdrop-blur-md"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 sm:px-10">
@@ -68,16 +77,16 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={`overflow-hidden transition-all duration-300 md:hidden ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="mt-3 flex flex-col gap-4 px-6 pt-2 pb-6">
+        <nav className="mt-3 flex flex-col gap-1 border-t border-white/5 px-6 pt-4 pb-8">
           {navigationLinks.map((link) => (
             <a
               href={link.href}
               key={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-mist hover:text-paper font-sans text-sm transition-colors"
+              className="text-mist active:text-paper border-b border-white/5 py-3 font-sans text-base transition-colors last:border-0"
             >
               {link.label}
             </a>

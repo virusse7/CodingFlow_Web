@@ -1,9 +1,6 @@
 export const socialLinks = [
     {label: 'GitHub',
-        href: '#'
-    },
-    {label: 'LinkedIn',
-        href: '#'
+        href: 'https://github.com/virusse7'
     },
     {label: 'Facebook',
         href: '#'
