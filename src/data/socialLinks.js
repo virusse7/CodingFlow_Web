@@ -3,6 +3,6 @@ export const socialLinks = [
         href: 'https://github.com/virusse7'
     },
     {label: 'Facebook',
-        href: '#'
+        href: 'https://www.facebook.com/people/CodingFlow-Web/61594321701498/'
     },
 ]

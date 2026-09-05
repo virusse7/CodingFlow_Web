@@ -1,6 +1,6 @@
 import { navigationLinks } from "../../../data/navigationLinks";
 import { useState, useEffect } from "react";
-import logo from "../../../assets/CFLogo2.svg";
+import logo from "../../../assets/CFLogo.svg";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

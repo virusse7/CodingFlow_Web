@@ -165,10 +165,10 @@ export default function Contact() {
           <div className="flex flex-col gap-3">
             <h3 className="text-lg">Wolisz napisać bezpośrednio?</h3>
             <a
-              href="mailto:"
+              href="mailto:codingflowweb@gmail.com"
               className="text-signal hover:text-paper font-mono text-sm transition-colors"
             >
-              blabla@.com
+              codingflowweb@gmail.com
             </a>
           </div>
           <div className="flex flex-col gap-4">
