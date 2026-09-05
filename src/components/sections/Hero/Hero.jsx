@@ -95,7 +95,7 @@ export default function Hero() {
         initial="hidden"
         animate={scrolled ? "hidden" : "visible"}
         custom={0.6}
-        className="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 sm:bottom-10"
+        className="mt-16 sm:mt-24"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
@@ -106,12 +106,12 @@ export default function Hero() {
             height="20"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#37E8C4"
+
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <path d="M12 5v14M5 12l7 7 7-7" />
+            <path stroke="#37E8C4" d="M12 5v14M5 12l7 7 7-7" />
           </svg>
         </motion.div>
       </motion.div>

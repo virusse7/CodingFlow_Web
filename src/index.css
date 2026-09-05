@@ -53,13 +53,14 @@
     }
 
     .btn-ghost {
-        @apply border border-mist/30 text-paper px-6 py-3 rounded-full
-                hover:border-signal hover:text-signal transition-colors;
+        @apply border border-mist/30 text-paper px-6 py-3 rounded-full shadow-lg shadow-black/30 hover:shadow-signal/5
+                hover:border-signal hover:text-signal transition-all;
     }
 
     .card {
-        @apply bg-surface rounded-2xl p-6 border border-white/5
+        @apply rounded-2xl p-6 border border-white/5
                 hover:border-signal/30 transition-colors;
+                background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-hover) 100%);
     }
     
     .section {
