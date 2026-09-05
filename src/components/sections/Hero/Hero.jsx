@@ -38,7 +38,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="section flex min-h-screen flex-col items-center justify-center text-center">
+    <section className="section flex min-h-screen flex-col items-center justify-start pt-32 text-center sm:justify-center sm:pt-0">
       <motion.div
         variants={fadeLeft}
         initial="hidden"
@@ -95,7 +95,7 @@ export default function Hero() {
         initial="hidden"
         animate={scrolled ? "hidden" : "visible"}
         custom={0.6}
-        className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
+        className="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 sm:bottom-10"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
