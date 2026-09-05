@@ -80,7 +80,7 @@ export default function Navbar() {
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="mt-3 flex flex-col gap-1 border-t border-white/5 px-6 pt-4 pb-8">
+        <nav className="mt-3 flex flex-col gap-1 border-t border-white/5 px-6 pt-4">
           {navigationLinks.map((link) => (
             <a
               href={link.href}
@@ -91,7 +91,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a href="#contact" className="btn-primary mt-2 text-center text-sm">
+          <a href="#contact" className="btn-primary my-6 text-center text-sm">
             Porozmawiajmy
           </a>
         </nav>

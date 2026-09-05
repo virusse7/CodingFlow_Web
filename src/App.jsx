@@ -1,10 +1,10 @@
 import Footer from "./components/layout/Footer/Footer";
 import Hero from "./components/sections/Hero/Hero";
 import Navbar from "./components/layout/Navbar/Navbar";
-import Contact from "./components/sections/Contact/Contact";
 import Services from "./components/sections/Services/Services";
 import Work from "./components/sections/Work/Work";
 import Process from "./components/sections/Process/Process";
+import Collaboration from "./components/sections/Collaboration/Collaboration";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Services />
         <Work />
         <Process />
-        <Contact />
+        <Collaboration />
       </main>
       <Footer />
     </div>

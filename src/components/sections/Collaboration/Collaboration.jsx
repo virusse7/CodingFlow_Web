@@ -13,7 +13,7 @@ const fadeUp = {
   }),
 };
 
-export default function Contact() {
+export default function Collaboration() {
   const formRef = useRef();
 
   const [form, setForm] = useState({
@@ -37,8 +37,8 @@ export default function Contact() {
       setError("Imię jest wymagane.");
       return;
     }
-    if (!form.email.trim() && !form.phone.trim()) {
-      setError("Podaj email lub numer telefonu.");
+    if (!form.email.trim()) {
+      setError("Email jest wymagany.");
       return;
     }
     setStatus("sending");
@@ -112,10 +112,10 @@ export default function Contact() {
               <label className="text-mist font-mono text-xs">Telefon</label>
               <input
                 type="tel"
-                name="tel"
+                name="phone"
                 onChange={handleChange}
                 value={form.phone}
-                placeholder="Wprowadź numer telefonu"
+                placeholder="Opcjonalnie - Wprowadź numer telefonu"
                 className="bg-surface text-paper placeholder:text-mist/40 focus:border-signal/50 rounded-xl border border-white/10 px-4 py-3 text-sm transition-colors focus:outline-none"
               />
             </div>
