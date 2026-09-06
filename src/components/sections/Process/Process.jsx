@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { steps } from "./processData";
+import { steps } from "./data/processData";
 
 const fadeLeft = {
   hidden: { opacity: 0, x: -40 },

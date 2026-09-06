@@ -5,6 +5,7 @@ import Services from "./components/sections/Services/Services";
 import Work from "./components/sections/Work/Work";
 import Process from "./components/sections/Process/Process";
 import Collaboration from "./components/sections/Collaboration/Collaboration";
+import Pricing from "./components/sections/Pricing/Pricing";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main className="flex-1 pt-20">
         <Hero />
         <Services />
+        <Pricing />
         <Work />
         <Process />
         <Collaboration />

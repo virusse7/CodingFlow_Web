@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { socialLinks } from "../../../data/socialLinks";
@@ -14,6 +14,8 @@ const fadeUp = {
 };
 
 export default function Collaboration() {
+  const [error, setError] = useState("");
+  const [status, setStatus] = useState("idle"); //idle | sending | success | error
   const formRef = useRef();
 
   const [form, setForm] = useState({
@@ -22,8 +24,25 @@ export default function Collaboration() {
     phone: "",
     message: "",
   });
-  const [error, setError] = useState("");
-  const [status, setStatus] = useState("idle"); //idle | sending | success | error
+
+  const getServiceFromUrl = () => {
+    const hash = window.location.hash;
+    const queryString = hash.includes("?") ? hash.split("?")[1] : "";
+    const params = new URLSearchParams(queryString);
+    const service = params.get("service");
+    return service ? `Jestem zainteresowany/a usługą: ${service}` : "";
+  };
+
+  useEffect(() => {
+    const onHashChange = () => {
+      const service = getServiceFromUrl();
+      if (service) {
+        setForm((prev) => ({ ...prev, message: service }));
+      }
+    };
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -57,7 +76,7 @@ export default function Collaboration() {
   };
 
   return (
-    <section id="contact" className="section">
+    <section id="collaboration" className="section">
       <motion.div
         variants={fadeUp}
         initial="hidden"
@@ -67,7 +86,7 @@ export default function Collaboration() {
         className="mb-14 text-center"
       >
         <span className="eyebrow">
-          <span>{"<"}</span> Kontakt {"/>"}
+          <span>{"<"}</span> Współpraca {"/>"}
         </span>
         <h2 className="text-4xl md:text-5xl">
           Zacznijmy <span className="text-signal">współpracę</span>

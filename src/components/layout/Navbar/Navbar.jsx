@@ -91,7 +91,11 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a href="#contact" className="btn-primary my-6 text-center text-sm">
+          <a
+            href="#collaboration"
+            onClick={() => setMenuOpen(false)}
+            className="btn-primary my-6 text-center text-sm"
+          >
             Porozmawiajmy
           </a>
         </nav>

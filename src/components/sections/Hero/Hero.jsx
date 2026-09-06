@@ -82,7 +82,7 @@ export default function Hero() {
         custom={0.45}
         className="flex flex-col gap-4 sm:flex-row"
       >
-        <a href="#contact" className="btn-primary font-display">
+        <a href="#collaboration" className="btn-primary font-display">
           Zacznijmy współpracę
         </a>
         <a href="#work" className="btn-ghost font-display">
