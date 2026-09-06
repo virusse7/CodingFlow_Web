@@ -105,8 +105,12 @@ export default function Collaboration() {
           className="flex flex-col gap-4"
         >
           <div className="flex flex-col gap-1.5">
-            <label className="text-mist font-mono text-xs">Imię</label>
+            <label htmlFor="name" className="text-mist font-mono text-xs">
+              Imię
+            </label>
             <input
+              autoComplete="name"
+              id="name"
               type="text"
               name="name"
               value={form.name}
@@ -117,8 +121,12 @@ export default function Collaboration() {
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="flex flex-col gap-1.5">
-              <label className="text-mist font-mono text-xs">Email</label>
+              <label htmlFor="email" className="text-mist font-mono text-xs">
+                Email
+              </label>
               <input
+                autoComplete="email"
+                id="email"
                 type="email"
                 name="email"
                 value={form.email}
@@ -128,8 +136,12 @@ export default function Collaboration() {
               />
             </div>
             <div className="flex flex-col gap-1.5">
-              <label className="text-mist font-mono text-xs">Telefon</label>
+              <label htmlFor="phone" className="text-mist font-mono text-xs">
+                Telefon
+              </label>
               <input
+                autoComplete="tel"
+                id="phone"
                 type="tel"
                 name="phone"
                 onChange={handleChange}
@@ -140,8 +152,12 @@ export default function Collaboration() {
             </div>
           </div>
           <div className="flex flex-col gap-1.5">
-            <label className="text-mist font-mono text-xs">Wiadomość</label>
+            <label htmlFor="message" className="text-mist font-mono text-xs">
+              Wiadomość
+            </label>
             <textarea
+              autoComplete="off"
+              id="message"
               name="message"
               value={form.message}
               onChange={handleChange}

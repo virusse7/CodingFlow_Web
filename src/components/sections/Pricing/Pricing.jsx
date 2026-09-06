@@ -3,11 +3,11 @@ import { pricingExtras, pricingItems } from "./data/pricingItems";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: (delay = 0) => ({
+  visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", delay },
-  }),
+    transition: { duration: 0.3, ease: "easeOut" },
+  },
 };
 
 export default function Pricing() {
@@ -17,8 +17,7 @@ export default function Pricing() {
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
-        custom={0}
+        viewport={{ once: true, margin: "0px" }}
         className="mb-16 text-center"
       >
         <span className="eyebrow">
@@ -40,7 +39,7 @@ export default function Pricing() {
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true }}
             custom={index + 0.1}
             className="card flex flex-col gap-4"
           >
